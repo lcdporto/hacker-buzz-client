@@ -1,0 +1,63 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2 class="md-flex">Events Clock</h2>
+    </div>
+</md-toolbar>
+<md-content flex layout-padding>
+
+
+    <md-list>
+        <md-list-item class="md-2-line" ng-repeat-start="event in vm.storage.events">
+            <div class="md-list-item-text">
+                <h3>
+                    <span># </span> {{event.name}}
+                </h3>
+                <p>
+                    <span>
+                        <b>Start</b> {{event.startDate | amCalendar}},
+                    </span>
+                    <span>
+                        <b>Finish</b> {{event.endDate | amCalendar}}
+                    </span>
+                </p>
+                <md-icon ng-click="vm.storage.events.splice($index, 1);" class="md-secondary" md-svg-src="content/icons/ic_delete_black_24px.svg"></md-icon>
+            </div>
+        </md-list-item>
+        <md-divider ng-repeat-end></md-divider>
+    </md-list>
+
+    <md-card>
+        <md-card-title>
+            <md-card-title-text layout="row" layout-align="center">
+                <span class="md-headline">Adicionar evento</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="column">
+
+            <md-input-container>
+                <label>Nome do evento</label>
+                <input ng-model="vm.newEvent.name">
+            </md-input-container>
+
+            <div>
+                Início: <input datetime-picker ng-model="vm.newEvent.startDate" future-only/>
+            </div>
+            <div>
+                Fim: <input datetime-picker ng-model="vm.newEvent.endDate" future-only/>
+            </div>
+
+
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="start center">
+            <md-button ng-click="vm.addEvent()">Adicionar</md-button>
+        </md-card-actions>
+    </md-card>
+
+    <md-fab-speed-dial>
+        <md-fab-trigger>
+            <md-button ui-sref="count" aria-label="menu" class="md-fab md-warn">
+                Go!
+            </md-button>
+        </md-fab-trigger>
+    </md-fab-speed-dial>
+</md-content>
