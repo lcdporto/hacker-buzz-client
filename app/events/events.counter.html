@@ -1,6 +1,8 @@
 <div layout="column" layout-align="center center" flex style="height: 100%">
     <div id="counter-wrapper" layout="column" layout-align="center center">
-        <h3># {{vm.currentEvent.name}}</h3>
+        <h3 ng-dblclick="vm.goToEditor();">
+            # {{vm.currentEvent.name}}
+        </h3>
 
         <h1>{{vm.currentEvent.remaining.hours}}:{{vm.currentEvent.remaining.minutes}}:{{vm.currentEvent.remaining.seconds}}</h1>
     </div>

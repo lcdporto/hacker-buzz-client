@@ -6,11 +6,13 @@
         .controller('EventsCounterController', Controller);
 
     /* @ngInject */
-    function Controller($interval, $rootScope, $localStorage) {
+    function Controller($interval, $rootScope, $localStorage, $state) {
         var vm = this;
         vm.title = 'Controller';
         vm.events = [];
         vm.interval = false;
+
+        vm.goToEditor = goToEditor;
 
         activate();
 
@@ -26,7 +28,6 @@
 
             vm.currentEvent = getNextEvent();
             vm.interval = $interval(updateEvents, 1000);
-            console.log(vm.storage);
         }
 
         function updateEvents() {
@@ -89,6 +90,10 @@
                 color += letters[Math.floor(Math.random() * 16)];
             }
             return color;
+        }
+
+        function goToEditor() {
+            $state.go('setevents');
         }
     }
 })();

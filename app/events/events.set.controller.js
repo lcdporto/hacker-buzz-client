@@ -6,7 +6,7 @@
         .controller('EventsSetController', Controller);
 
     /* @ngInject */
-    function Controller($scope, $localStorage, $timeout, $mdDialog, AppSettings) {
+    function Controller($scope, $localStorage, $timeout, $mdDialog, AppSettings, $rootScope) {
         var vm = this;
         vm.title = 'Controller';
 
@@ -26,6 +26,8 @@
                     vm.openMenuTooltip = vm.openMenu;
                 }, (openMenu) ? 400 : 0);
             });
+
+            $rootScope.backColor = '#eee';
         }
 
         function addEvent() {
