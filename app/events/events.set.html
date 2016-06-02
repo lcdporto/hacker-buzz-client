@@ -53,13 +53,21 @@
                 <md-button class="md-raised md-accent" ng-click="vm.addEvent()">ADD</md-button>
             </md-card-actions>
         </md-card>
-        <md-fab-speed-dial>
-            <md-fab-trigger>
-                <md-button ui-sref="count" aria-label="menu" class="md-fab md-warn">
-                    Go!
-                </md-button>
-            </md-fab-trigger>
-        </md-fab-speed-dial>
     </md-content>
 
 </div>
+
+
+<md-fab-speed-dial md-open="vm.openMenu" md-direction="up" class="md-scale md-fab-bottom-right" ng-mouseenter="vm.openMenu=true" ng-mouseleave="vm.openMenu=false">
+    <md-fab-trigger>
+        <md-button  aria-label="menu" class="md-fab md-warn">
+            ...
+        </md-button>
+    </md-fab-trigger>
+    <md-fab-actions>
+        <md-button ui-sref="count" aria-label="Start counter" class="md-fab md-raised md-mini">
+            <md-tooltip md-direction="left" md-visible="vm.openMenuTooltip" md-autohide="false">Start counter</md-tooltip>
+            Go!
+        </md-button>
+    </md-fab-actions>
+</md-fab-speed-dial>
