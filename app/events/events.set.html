@@ -27,13 +27,13 @@
             <md-divider ng-repeat-end></md-divider>
             <md-list-item style="background: #fafafa; padding: 0 0 0 15px;">
                 <div flex layout="column" style="padding-right: 30px;">
-                    <md-input-container style="margin-bottom: 0px;">
+                    <md-input-container style="margin-bottom: 0;">
                         <label>Event description</label>
                         <input ng-model="vm.newEvent.name">
                     </md-input-container>
                     <div layout="row" flex>
                         <div flex="50" layout="row">
-                            <md-input-container flex style="margin-bottom: 0px">
+                            <md-input-container flex style="margin-bottom: 0">
                                 <label>Starts at:</label>
                                 <input mdc-datetime-picker date="true" time="true" type="text"
                                        placeholder="Pick a date"
@@ -42,7 +42,7 @@
                             </md-input-container>
                         </div>
                         <div flex="50" layout="row">
-                            <md-input-container flex style="margin-bottom: 0px;">
+                            <md-input-container flex style="margin-bottom: 0;">
                                 <label>Ends at:</label>
                                 <input mdc-datetime-picker date="true" time="true" type="text"
                                        placeholder="Pick a date"

@@ -36,12 +36,13 @@
         }
 
         function share() {
+            var key = btoa(angular.toJson(vm.storage.events));
             $mdDialog.show(
                 $mdDialog.alert()
                     .parent(angular.element(document.querySelector('body')))
                     .clickOutsideToClose(true)
                     .title('Share')
-                    .textContent(AppSettings.appBaseUrl + '/load?events=' + btoa(angular.toJson(vm.storage.events)))
+                    .textContent(AppSettings.appBaseUrl + '/load?events=' + key)
                     .ariaLabel('Share')
                     .ok('Close')
             );
