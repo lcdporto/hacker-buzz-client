@@ -29,27 +29,27 @@
     <md-card>
         <md-card-title>
             <md-card-title-text layout="row" layout-align="center">
-                <span class="md-headline">Adicionar evento</span>
+                <span class="md-headline">Add New Event</span>
             </md-card-title-text>
         </md-card-title>
         <md-card-content layout="column">
 
             <md-input-container>
-                <label>Nome do evento</label>
+                <label>Event description</label>
                 <input ng-model="vm.newEvent.name">
             </md-input-container>
 
             <div>
-                Início: <input datetime-picker ng-model="vm.newEvent.startDate" future-only/>
+                Start: <input datetime-picker ng-model="vm.newEvent.startDate" future-only/>
             </div>
             <div>
-                Fim: <input datetime-picker ng-model="vm.newEvent.endDate" future-only/>
+                End: <input datetime-picker ng-model="vm.newEvent.endDate" future-only/>
             </div>
 
 
         </md-card-content>
         <md-card-actions layout="row" layout-align="start center">
-            <md-button ng-click="vm.addEvent()">Adicionar</md-button>
+            <md-button ng-click="vm.addEvent()">ADD</md-button>
         </md-card-actions>
     </md-card>
 
