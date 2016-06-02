@@ -8,7 +8,7 @@
     <md-content flex layout-padding>
 
         <md-list>
-            <md-list-item class="md-2-line" ng-repeat-start="event in vm.storage.events">
+            <md-list-item class="md-2-line" ng-repeat-start="event in vm.storage.events | orderBy: 'startDate'">
                 <div class="md-list-item-text">
                     <h3>
                         <span># </span> {{event.name}}
