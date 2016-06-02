@@ -5,6 +5,7 @@
         .module('app.core')
         .constant('AppSettings', {
             appName: 'Events Clock',
-            appVersion: 0.1
+            appVersion: 0.1,
+            appBaseUrl: 'http://clock.audienciazero.net'
         });
 })();

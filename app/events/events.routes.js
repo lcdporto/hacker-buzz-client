@@ -30,6 +30,13 @@
                     controller: 'EventsCounterController',
                     controllerAs: 'vm'
                 }
+            },
+            {
+                state: 'load',
+                config: {
+                    url: '/load?events=',
+                    controller: 'EventsLoadController'
+                }
             }
         ];
     }

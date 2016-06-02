@@ -64,14 +64,18 @@
                    ng-mouseenter="vm.openMenu=true" ng-mouseleave="vm.openMenu=false">
     <md-fab-trigger>
         <md-button aria-label="menu" class="md-fab md-warn">
-            ...
+            <md-icon>menu</md-icon>
         </md-button>
     </md-fab-trigger>
     <md-fab-actions>
         <md-button ui-sref="count" aria-label="Start counter" class="md-fab md-raised md-mini">
             <md-tooltip md-direction="left" md-visible="vm.openMenuTooltip" md-autohide="false">Start counter
             </md-tooltip>
-            Go!
+            <md-icon>timer</md-icon>
+        </md-button>
+        <md-button aria-label="Share" class="md-fab md-raised md-mini" ng-click="vm.share()">
+            <md-tooltip md-direction="left" md-visible="vm.openMenuTooltip" md-autohide="false">Share</md-tooltip>
+            <md-icon>share</md-icon>
         </md-button>
     </md-fab-actions>
 </md-fab-speed-dial>
