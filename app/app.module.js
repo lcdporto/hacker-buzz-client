@@ -9,9 +9,9 @@
             'satellizer',
             'app.core',
             'app.events',
-            'angularjs-datetime-picker',
             'ngStorage',
-            'angularMoment'
+            'angularMoment',
+            'ngMaterialDatePicker'
         ])
         .config(function ($urlRouterProvider,
                           $mdThemingProvider,

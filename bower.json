@@ -21,9 +21,9 @@
     "angular-ui-router": "~0.2.15",
     "angular-animate": "~1.4.7",
     "satellizer": "~0.13.0",
-    "angularjs-datetime-picker": "^0.1.20",
     "ngstorage": "^0.3.10",
     "angular-moment": "^0.10.3",
-    "moment": "^2.11.2"
+    "moment": "^2.11.2",
+    "angular-material-datetimepicker": "^1.4.0"
   }
 }

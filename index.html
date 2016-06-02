@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-    <head>
+<head>
 
-        <!-- build:css css/styles.css -->
-        <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
-        <!-- endbower -->
+    <!-- build:css css/styles.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="bower_components/angular-material-datetimepicker/css/material-datetimepicker.min.css"/>
+    <!-- endbower -->
 
-        <!-- inject:css -->
-        <link rel="stylesheet" href="content/app.css">
-        <!-- endinject -->
-        <link rel="stylesheet" href="bower_components/angularjs-datetime-picker/angularjs-datetime-picker.css">
-        <!-- endbuild  -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="content/app.css">
+    <!-- endinject -->
+    <link rel="stylesheet" href="bower_components/angularjs-datetime-picker/angularjs-datetime-picker.css">
+    <!-- endbuild  -->
 
-        <!-- cdns -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <!-- cdns -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <meta name="viewport" content="initial-scale=1"/>
-        <meta charset="UTF-8">
-    </head>
-    <body ng-cloak style="background: {{backColor}};">
+    <meta name="viewport" content="initial-scale=1"/>
+    <meta charset="UTF-8">
+</head>
+<body ng-cloak style="background: {{backColor}};">
 
 
-        <div ui-view id="page-wrapper" flex>
+<div ui-view flex>
 
-        </div>
+</div>
 
-        <!-- build:js js/libs.js -->
-        <!-- inject dependencies defined in bower.json using wiredep and gulp-inject -->
-        <!-- bower:js -->
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/angular-aria/angular-aria.js"></script>
-        <script src="bower_components/angular-material/angular-material.js"></script>
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="bower_components/satellizer/satellizer.js"></script>
-        <script src="bower_components/angularjs-datetime-picker/angularjs-datetime-picker.js"></script>
-        <script src="bower_components/ngstorage/ngStorage.js"></script>
-        <script src="bower_components/moment/moment.js"></script>
-        <script src="bower_components/angular-moment/angular-moment.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
+<!-- build:js js/libs.js -->
+<!-- inject dependencies defined in bower.json using wiredep and gulp-inject -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/satellizer/satellizer.js"></script>
+<script src="bower_components/angularjs-datetime-picker/angularjs-datetime-picker.js"></script>
+<script src="bower_components/ngstorage/ngStorage.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/momentjs/moment.js"></script>
+<script src="bower_components/angular-moment/angular-moment.js"></script>
+<script src="bower_components/angular-material-datetimepicker/js/angular-material-datetimepicker.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-        <!-- build:js js/app.js -->
-        <!-- inject our custom code using gulp-inject -->
-        <!-- inject:js -->
-        <script src="app/app.module.js"></script>
-        <script src="app/core/core.module.js"></script>
-        <script src="app/events/events.module.js"></script>
-        <script src="app/core/router.helper.provider.js"></script>
-        <script src="app/core/settings.js"></script>
-        <script src="app/core/templates.js"></script>
-        <script src="app/events/events.counter.controller.js"></script>
-        <script src="app/events/events.routes.js"></script>
-        <script src="app/events/events.set.controller.js"></script>
-        <!-- endinject -->
-        <!-- endbuild -->
+<!-- build:js js/app.js -->
+<!-- inject our custom code using gulp-inject -->
+<!-- inject:js -->
+<script src="app/app.module.js"></script>
+<script src="app/core/core.module.js"></script>
+<script src="app/events/events.module.js"></script>
+<script src="app/core/router.helper.provider.js"></script>
+<script src="app/core/settings.js"></script>
+<script src="app/core/templates.js"></script>
+<script src="app/events/events.counter.controller.js"></script>
+<script src="app/events/events.routes.js"></script>
+<script src="app/events/events.set.controller.js"></script>
+<!-- endinject -->
+<!-- endbuild -->
 
-        <!-- by default a base is required when html5Mode is enabled -->
-        <!-- https://docs.angularjs.org/error/$location/nobase  -->
-        <base href="/">
-    </body>
+<!-- by default a base is required when html5Mode is enabled -->
+<!-- https://docs.angularjs.org/error/$location/nobase  -->
+<base href="/">
+</body>
 </html>
