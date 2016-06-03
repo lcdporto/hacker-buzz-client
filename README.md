@@ -10,6 +10,10 @@ like hackathons or conferences.
 
 You can try the events clock without installing it. You can use it as a [free service here](http://clock.audienciazero.net/)
 
+## Installing with Docker
+
+A docker image is available in [docker hub](https://hub.docker.com/r/lcdporto/clock/)
+
 ## Build instructions
 
 Events Clock is a client-side web application built using HTML5 and
