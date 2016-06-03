@@ -6,11 +6,13 @@
         .controller('EventsCounterController', Controller);
 
     /* @ngInject */
-    function Controller($interval, $rootScope, $localStorage) {
+    function Controller($interval, $rootScope, $localStorage, $state) {
         var vm = this;
         vm.title = 'Controller';
         vm.events = [];
         vm.interval = false;
+
+        vm.goToEditor = goToEditor;
 
         activate();
 
@@ -26,7 +28,6 @@
 
             vm.currentEvent = getNextEvent();
             vm.interval = $interval(updateEvents, 1000);
-            console.log(vm.storage);
         }
 
         function updateEvents() {
@@ -53,15 +54,15 @@
             }
 
             var t = Date.parse(vm.currentEvent.endDate) - Date.parse(now);
-            var seconds = Math.floor( (t/1000) % 60 );
-            var minutes = Math.floor( (t/1000/60) % 60 );
-            var hours = Math.floor( (t/(1000*60*60)) % 24 );
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
             //var days = Math.floor( t/(1000*60*60*24) );
 
             vm.currentEvent.remaining = {
-                'hours': ((hours < 10)?'0' + hours:hours),
-                'minutes': ((minutes < 10)?'0' + minutes:minutes),
-                'seconds': ((seconds < 10)?'0' + seconds:seconds)
+                'hours': ((hours < 10) ? '0' + hours : hours),
+                'minutes': ((minutes < 10) ? '0' + minutes : minutes),
+                'seconds': ((seconds < 10) ? '0' + seconds : seconds)
             };
         }
 
@@ -89,6 +90,10 @@
                 color += letters[Math.floor(Math.random() * 16)];
             }
             return color;
+        }
+
+        function goToEditor() {
+            $state.go('setevents');
         }
     }
 })();

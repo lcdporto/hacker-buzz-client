@@ -6,11 +6,13 @@
         .controller('EventsSetController', Controller);
 
     /* @ngInject */
-    function Controller($rootScope, $localStorage) {
+    function Controller($scope, $localStorage, $timeout, $mdDialog, AppSettings, $rootScope) {
         var vm = this;
         vm.title = 'Controller';
 
         vm.addEvent = addEvent;
+        vm.share = share;
+        vm.openMenu = vm.openMenuTooltip = false;
 
         activate();
 
@@ -18,11 +20,32 @@
             vm.storage = $localStorage.$default({
                 events: []
             });
+
+            $scope.$watch('vm.openMenu', function (openMenu) {
+                $timeout(function () {
+                    vm.openMenuTooltip = vm.openMenu;
+                }, (openMenu) ? 400 : 0);
+            });
+
+            $rootScope.backColor = '#eee';
         }
 
         function addEvent() {
             vm.storage.events.push(angular.copy(vm.newEvent));
             vm.newEvent = {};
+        }
+
+        function share() {
+            var key = btoa(angular.toJson(vm.storage.events));
+            $mdDialog.show(
+                $mdDialog.alert()
+                    .parent(angular.element(document.querySelector('body')))
+                    .clickOutsideToClose(true)
+                    .title('Share')
+                    .textContent(AppSettings.appBaseUrl + '/load?events=' + key)
+                    .ariaLabel('Share')
+                    .ok('Close')
+            );
         }
     }
 })();
