@@ -6,6 +6,10 @@ like hackathons or conferences.
 
 ![title screenshot](./doc/img/running-timer-screen_2.jpg)
 
+## Online Demo
+
+You can try the events clock without installing it. You can use it as a [free service here](http://clock.audienciazero.net/)
+
 ## Build instructions
 
 Events Clock is a client-side web application built using HTML5 and
