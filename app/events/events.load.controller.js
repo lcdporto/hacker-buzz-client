@@ -20,7 +20,7 @@
                 events: events
             });
 
-            $state.go('setevents');
+            $state.go('count');
         }
     }
 })();
