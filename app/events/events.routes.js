@@ -37,7 +37,34 @@
                     url: '/load?events=',
                     controller: 'EventsLoadController'
                 }
-            }
+            },
+            {
+                state: 'test',
+                config: {
+                    url: '/test',
+                    templateUrl: 'app/events/test.html',
+                    // controller: 'EventsSetController',
+                    // controllerAs: 'vm'
+                }
+            },
+            {
+                state: 'landing',
+                config: {
+                    url: '/landing',
+                    templateUrl: 'app/events/landing.html',
+                    // controller: 'EventsSetController',
+                    // controllerAs: 'vm'
+                }
+            },
+            {
+                state: 'play',
+                config: {
+                    url: '/play',
+                    templateUrl: 'app/events/play.html',
+                    // controller: 'EventsSetController',
+                    // controllerAs: 'vm'
+                }
+            },
         ];
     }
 
