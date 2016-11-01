@@ -2,11 +2,34 @@
 <!DOCTYPE html>
 
 
-<html>
+  <html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+  
+<body ng-app="BlankApp" ng-cloak>
 
-<body>
 
-<h1>Play</h1>
+<md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-button aria-label="Go Back">
+          Home
+        </md-button>
+        <h2>
+          <span>Hacker Buzz</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-raised" aria-label="Learn More">
+          Menu
+        </md-button>
+      </div>
+    </md-toolbar>
+
+
+
+<h1></h1>
 
 <md-whiteframe class="middleBox">
     <img src="content/img/martelo.jpg" alt="foto aqui" style="width:100%;height:100%;">
@@ -22,6 +45,30 @@
       <md-button class="btn4">Pen</md-button>
 </section>
 
+
+
+
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  
+  <!-- Your application bootstrap  -->
+  <script type="text/javascript">    
+    /**
+     * You must include the dependency on 'ngMaterial' 
+     */
+    angular.module('BlankApp', ['ngMaterial']);
+  </script>
+
+  
+  
+  
 </body>
 
 </html>
